@@ -27,6 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // عرض المنتجات
+function renderProducts() {
+  const grid = document.getElementById("productsGrid");
+  grid.innerHTML = "";
+
+  if (products.length === 0) {
+    grid.innerHTML =
+      '<p style="text-align: center; color: #777; grid-column: 1/-1; padding: 2rem;">لا توجد منتجات حالياً، اضغط على زر + لإضافة منتج</p>';
+    return;
+  }
 
   products.forEach((product) => {
     const card = document.createElement("div");
@@ -42,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     grid.appendChild(card);
   });
-
+}
 
 // فتح/إغلاق السلة
 function toggleSidebar() {
