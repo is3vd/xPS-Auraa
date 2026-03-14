@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PS Aura | Store</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">PS <span>Aura</span></div>
+      <div class="header-icons">
+        <button onclick="toggleSidebar()">
+          🛒 السلة <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>أناقة لا تضاهى</h1>
+      <p>اكتشف أحدث صيحات الموضة مع PS Aura</p>
+    </section>
+
+    <div class="container">
+      <div class="products-grid" id="productsGrid">
+        <!-- المنتجات هتظهر هنا -->
+      </div>
+    </div>
+    <div class="sections">
+
+      <a class="pant-wep" href="/Pants/index.html">
+        <img src="WhatsApp Image 2026-03-13 at 1.23.16 AM.jpeg" alt="">
+       البناطيل  
+      </a>
+      
+      <a class="pant-wep" href="/hoodie/index.html">
+        <img src="hodey-uchiha.jpeg" alt="">
+       الهوديز  
+      </a>
+      
+      <a class="pant-wep" href="/Shirts/index.html">
+        <img src="WhatsApp Image 2026-03-14 at 2.17.07 AM.jpeg" alt="">
+       التيشيرتس
+      </a>
+      
+      <a class="pant-wep" href="/Suits/index.html">
+        <img src="WhatsApp Image 2026-03-14 at 2.17.37 AM.jpeg" alt="">
+       السوتس
+      </a>
+
+    </div>
+
+
+    <!-- Sidebar -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>سلة المشتريات</h3>
+        <button class="close-sidebar" onclick="toggleSidebar()">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <p style="text-align: center; color: #777; margin-top: 20px">
+          السلة فارغة
+        </p>
+      </div>
+      <div class="cart-footer">
+        <div class="total-price">
+          <span>المجموع:</span>
+          <span id="totalPrice">0 $</span>
+        </div>
+        <button class="checkout-btn" onclick="confirmPurchase()">
+          تأكيد الشراء
+        </button>
+      </div>
+    </aside>
+
+    <!-- Add Product Modal -->
+    <div class="modal" id="addProductModal">
+      <h2>إضافة منتج جديد</h2>
+      <form id="addProductForm">
+        <div class="form-group">
+          <label>اسم المنتج</label>
+          <input
+            type="text"
+            id="pName"
+            required
+            placeholder="مثال: قميص أسود"
+          />
+        </div>
+        <div class="form-group">
+          <label>السعر ($)</label>
+          <input type="number" id="pPrice" required placeholder="50" />
+        </div>
+        <div class="form-group">
+          <label>رابط الصورة الرئيسية</label>
+          <input
+            type="url"
+            id="pImg"
+            required
+            placeholder="https://i.imgur.com/abc123.jpg"
+            oninput="previewImage(this.value)"
+          />
+          <img id="imagePreview" class="image-preview" alt="معاينة الصورة" />
+          <p class="error-message" id="imageError">
+            ⚠️ الرابط غلط، تأكد إنه ينتهي بـ .jpg أو .png
+          </p>
+        </div>
+        <div class="form-group">
+          <label>رابط الصورة الثانية (اختياري)</label>
+          <input
+            type="url"
+            id="pImg2"
+            placeholder="https://i.imgur.com/xyz789.jpg"
+          />
+        </div>
+        <div class="form-group">
+          <label>المقاسات المتاحة</label>
+          <input type="text" id="pSizes" placeholder="مثال: S, M, L, XL" />
+        </div>
+        <div class="form-group">
+          <label>الوصف</label>
+          <textarea
+            id="pDescription"
+            rows="3"
+            placeholder="وصف المنتج..."
+          ></textarea>
+        </div>
+        <div class="modal-actions">
+        </div>
+      </form>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div
+      class="overlay"
+      id="detailsOverlay"
+      onclick="closeProductDetails()"
+    ></div>
+    <div class="product-details-modal" id="productDetailsModal">
+      <img id="detailImage" class="image-slider" src="" alt="" />
+      <div class="image-thumbnails" id="imageThumbnails"></div>
+      <h2 id="detailName"></h2>
+      <p class="price" id="detailPrice"></p>
+      <p class="info">
+        <strong>المقاسات:</strong> <span id="detailSizes"></span>
+      </p>
+      <p class="info">
+        <strong>الوصف:</strong> <span id="detailDescription"></span>
+      </p>
+      <button
+        class="add-btn"
+        style="margin-top: 1rem"
+        onclick="addToCartFromDetails()"
+      >
+    </div>
+    <!-- JavaScript Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
