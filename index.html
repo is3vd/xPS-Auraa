@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PS Aura | Hoodies </title>
+    <title>PS Aura | Store</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -30,14 +30,30 @@
         <!-- المنتجات هتظهر هنا -->
       </div>
     </div>
+    <div class="sections">
 
-    <button
-      class="fab-add"
-      onclick="openAddProductModal()"
-      title="إضافة منتج جديد"
-    >
-      +
-    </button>
+      <a class="pant-wep" href="/Pants/index.html">
+        <img src="WhatsApp Image 2026-03-13 at 1.23.16 AM.jpeg" alt="">
+       البناطيل  
+      </a>
+      
+      <a class="pant-wep" href="/hoodie/index.html">
+        <img src="hodey-uchiha.jpeg" alt="">
+       الهوديز  
+      </a>
+      
+      <a class="pant-wep" href="/Shirts/index.html">
+        <img src="WhatsApp Image 2026-03-14 at 2.17.07 AM.jpeg" alt="">
+       التيشيرتس
+      </a>
+      
+      <a class="pant-wep" href="/Suits/index.html">
+        <img src="WhatsApp Image 2026-03-14 at 2.17.37 AM.jpeg" alt="">
+       السوتس
+      </a>
+
+    </div>
+
 
     <!-- Sidebar -->
     <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
@@ -114,14 +130,6 @@
           ></textarea>
         </div>
         <div class="modal-actions">
-          <button
-            type="button"
-            class="btn-cancel"
-            onclick="closeAddProductModal()"
-          >
-            إلغاء
-          </button>
-          <button type="submit" class="btn-save">حفظ</button>
         </div>
       </form>
     </div>
@@ -148,15 +156,6 @@
         style="margin-top: 1rem"
         onclick="addToCartFromDetails()"
       >
-        أضف للسلة
-      </button>
-      <button
-        class="btn-cancel"
-        style="margin-top: 0.5rem; width: 100%"
-        onclick="closeProductDetails()"
-      >
-        إغلاق
-      </button>
     </div>
     <!-- JavaScript Logic -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
