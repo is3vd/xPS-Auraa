@@ -1,7 +1,7 @@
 // Environment Configuration
 const config = {
-  supabaseUrl: "https://bugtzbxhcnipdvewbiid.supabase.co",
+  supabaseUrl: "https://egfedyhpncsqdondlcvn.supabase.co",
   supabaseKey:
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1Z3R6YnhoY25pcGR2ZXdiaWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjA1NDYsImV4cCI6MjA4ODczNjU0Nn0.v0TeCJEqnaeKswzdVMQ6uQF3SZiVlmRZu5sMWE5SFoU",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVnZmVkeWhwbmNzcWRvbmRsY3ZuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM0NDI0MDIsImV4cCI6MjA4OTAxODQwMn0.2ngu9nglXHdqu7UEWGj1_GDt4fNiNJRKnw7r8rSWyw8",
   whatsappNumber: "201033962155",
 };
